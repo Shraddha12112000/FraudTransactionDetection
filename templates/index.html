@@ -1,120 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <title text-align: center>Fraud Transaction Detection Ineuron Internship</title>
-</head>
-<body bgcolor="#B1D7B4">
-        <div class="login">
-                <h1> Fraud Transaction Detection Ineuron Internship </h1><br>
-        
-                <form method="POST", action="{{url_for('home')}}">
-                    <div >
-                        time :  <input type="number" name='Time' placeholder="Enter the time in seconds">
-                    </div>
-                   <div >
-                    Second value :  <input type="number", name='val1' placeholder="enter 2">
-                   </div>
-                   <div >
-                    Third value :  <input type="number", name='val2' placeholder="enter 3">
-                    </div>
-                    <div >
-                        Fourth value : <input type="number", name='val3' placeholder="enter 4">
-                    </div>
-                    <div >
-                        Fifth value : <input type="number", name="val4" placeholder="enter 5">
-                    </div>
-                    <div >
-                        Sixth value : <input type="number", name="val5" placeholder="enter 6">
-                    </div>
-                    <div >
-                        Seventh value : <input type="number", name="val6" placeholder="enter 7">
-                    </div>
-                    <div >
-                        Eighth value : <input type="number", name="val7" placeholder="enter 8">
-                    </div>
-                    <div >
-                        Ninth value : <input type="number", name="val8" placeholder="enter 9">
-                    </div>
-                    <div >
-                        Tenth value : <input type="number", name="val9" placeholder="enter 10">
-                    </div>
-                    <div >
-                        Eleventh value : <input type="number", name="val10" placeholder="enter 11">
-                    </div>
-                    <div >
-                        Twelfth value : <input type="number", name="val11" placeholder="enter 12">
-                    </div>
-                    <div >
-                        Thirteen value : <input type="number", name="val12" placeholder="enter 13">
-                    </div>
-                    <div >
-                        Fourteenth value : <input type="number", name="val13" placeholder="enter 14">
-                    </div>
-                    <div >
-                        Fifteenth value : <input type="number", name="val14" placeholder="enter 15">
-                    </div>
-                    <div >
+    <head>
+        <title>Fraud Transaction Detection Internship Project</title>
+        <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    </head>
+    <style>
+        body{
+            background-image: url("im.webp");
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .label{
+            color: rgba(25, 0, 255, 0.924);
+            font-family: 'Times New Roman', Times, serif;
+            align-items: center;
+            font-size: large;
+            
+            
 
-                        Sixteenth value : <input type="number", name="val15" placeholder="enter 16">
-                    </div>
-                    <div >
-                        Seventeen value : <input type="number", name="val16" placeholder="enter 17">
-                    </div>
-                    <div >
-                        Eighteenth value : <input type="number", name="val17" placeholder="enter 18">
-                    </div>
-                    <div >
-                        Nineteenth value : <input type="number", name="val18" placeholder="enter 19">
-                    </div>
-                    <div >
-                        Twentyth value : <input type="number", name="val19" placeholder="enter 20">
-                    </div>
-                    <div >
-                        Twentyoneth value : <input type="number", name="val20" placeholder="enter 21">
-                    </div>
-                    <div >
-                        Twentytwoth value : <input type="number", name="val21" placeholder="enter 22">
-                    </div>
-                    <div >
-                        Twentythird value : <input type="number", name="val22" placeholder="enter 23">
-                    </div>
-                    <div >
-                        Twentyfourth value : <input type="number", name="val23" placeholder="enter 24">
-                    </div>
-                    <div >
-                        Twentyfifth value : <input type="number", name="val24" placeholder="enter 25">
-                    </div>
-                    <div >
-                        Twentysixth value : <input type="number", name="val25" placeholder="enter 26">
-                    </div>
-                    <div >
-                        Twentyseventh value : <input type="number", name="val26" placeholder="enter 27">
-                    </div>
-                    <div >
-                        Twentyeighth value : <input type="number", name="val27" placeholder="enter 28">
-                    </div>
-                    <div >
-                        Twentynineth value : <input type="number", name="val28" placeholder="enter 29">
-                    </div>
-                    <center>
-                    <div >
-                        Amount : <input type="number", name="Amount" placeholder="enter Amount">
-                    </div>
-                    </center>
-                    <center>
-                        <div >
-                            <button class="btn btn-primary" type="submit" value="Predict">Predict</button>
-                        </div>
-                    </center>
-                    
-                </form>
+        }
+        button{
+            background-color: rgba(219, 122, 190, 0.753);
+            border: 1px solid rgba(58, 24, 24, 0.3);
+            border-radius: 1rem;
+            color: rgb(56, 56, 54);
+            text-align: center;
+            margin-left: 630px;
+            text-decoration: none;
+            display: inline-block;
+            padding: 12px;
+            font-size: large;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: crimson;
+            color: black;
+        }
+        input{
+            width: 100%;
+            margin-bottom: 10px;
+            background: rgba(214, 94, 39, 0.3);
+	        border: none;
+            outline: none;
+            padding: 10px;
+            font-size: 13px;
+            text-shadow: 1px 1px 1px rgba(20, 9, 172, 0.3);
+            border: 1px solid rgba(58, 24, 24, 0.3);
+            border-radius: 4px;
+        }
+        input:focus { 
+            box-shadow: inset 0 -5px 45px rgba(250, 7, 7, 0.4), 0 1px 1px rgba(88, 0, 160, 0.2); }
+        .Predictform{
+            width: 100%;}
+            .outer{
+                margin: 10px;
+                background-color: rgb(39, 151, 114);
+                padding: 10px;}
+    </style>
+    <body>
+        <div id ="outer">
+            <img id ="img" src="ineuron-logo.png" alt="ineuron logo" width="170" height="80" style="float: right; margin-top: 0; margin-right: 40px; " >
+            <header>
+                <h1 id="h1" style="color: rgb(255, 107, 8); margin-left: 400px;">Transaction Prediction Form</h1>
+            </header>
+            <form method="POST", action="{{url_for('home')}}">
+                <label class ="label" for="time">Time : </label><br>
+                <input type="number" name='Time' placeholder="Enter the time in seconds"><br>
+                <label class ="label">Second Value : </label><br>
+                <input type="number" name='val1' placeholder="enter 2nd value"><br>
+                <label class ="label">Third Value : </label><br>
+                <input type="number" name='val2' placeholder="enter 3rd value"><br>
+                <label class ="label">Fourth Value : </label><br>
+                <input type="number" name='val3' placeholder="enter 4th value"><br>
+                <label class ="label">Fifth Value : </label><br>
+                <input type="number" name='val4' placeholder="enter 5th value"><br>
+                <label class ="label">Sixth Value : </label><br>
+                <input type="number" name='val5' placeholder="enter 6th value"><br>
+                <label class ="label">Seventh Value : </label><br>
+                <input type="number" name='val6' placeholder="enter 7th value"><br>
+                <label class ="label">Eighth Value : </label><br>
+                <input type="number" name='val7' placeholder="enter 8th value"><br>
+                <label class ="label">Nineth Value : </label><br>
+                <input type="number" name='val8' placeholder="enter 9th value"><br>
+                <label class ="label">Tenth Value : </label><br>
+                <input type="number" name='val9' placeholder="enter 10th value"><br>
+                <label class ="label">Eleventh Value : </label><br>
+                <input type="number" name='val10' placeholder="enter 11th value"><br>
+                <label class ="label">Twelth Value : </label><br>
+                <input type="number" name='val11' placeholder="enter 12th value"><br>
+                <label class ="label">Thirteen Value : </label><br>
+                <input type="number" name='val12' placeholder="enter 13th value"><br>
+                <label class ="label">Fourteenth Value : </label><br>
+                <input type="number" name='val13' placeholder="enter 14th value"><br>
+                <label class ="label">Fifteenth Value : </label><br>
+                <input type="number" name='val14' placeholder="enter 15th value"><br>
+                <label class ="label">Sixteenth Value : </label><br>
+                <input type="number" name='val15' placeholder="enter 16th value"><br>
+                <label class ="label">Seventeenth Value : </label><br>
+                <input type="number" name='val16' placeholder="enter 17th value"><br>
+                <label class ="label">Eighteenth Value : </label><br>
+                <input type="number" name='val17' placeholder="enter 18th value"><br>
+                <label class ="label">Nineteenth Value : </label><br>
+                <input type="number" name='val18' placeholder="enter 19th value"><br>
+                <label class ="label">Twentyth Value : </label><br>
+                <input type="number" name='val19' placeholder="enter 20th value"><br>
+                <label class ="label">Twentyoneth Value : </label><br>
+                <input type="number" name='val20' placeholder="enter 21th value"><br>
+                <label class ="label">Twentytwoth Value : </label><br>
+                <input type="number" name='val21' placeholder="enter 22th value"><br>
+                <label class ="label">Twentythird Value : </label><br>
+                <input type="number" name='val22' placeholder="enter 23th value"><br>
+                <label class ="label">Twentyfourth Value : </label><br>
+                <input type="number" name='val23' placeholder="enter 24th value"><br>
+                <label class ="label">Twentyfifth Value : </label><br>
+                <input type="number" name='val24' placeholder="enter 25th value"><br>
+                <label class ="label">Twentysixth Value : </label><br>
+                <input type="number" name='val25' placeholder="enter 26th value"><br>
+                <label class ="label">Twentyseventh Value : </label><br>
+                <input type="number" name='val26' placeholder="enter 27th value"><br>
+                <label class ="label">Twentyeighth Value : </label><br>
+                <input type="number" name='val27' placeholder="enter 28th value"><br>
+                <label class ="label">Twentynineth Value : </label><br>
+                <input type="number" name='val28' placeholder="enter 29th value"><br>
+                <label class ="label">Amount : </label><br>
+                <input type="number" name='Amount' placeholder="Enter Amount"><br>
+                <div >
+                    <button id="btn" type="submit" value="Predict">Predict</button>
+                </div>
+            </form>
         
-        </div>
-
-</body>
+    </div>
+    </body>
+    <footer color:"black" style="display: block; margin-top: 20px; text-align: center; color: rgb(29, 6, 0);"> Created By Shraddha Manoj Gujar
+        <h2 style="position: absolute; margin-top: 0px; color: rgb(255, 89, 13); margin-left: 621px;">ineuron.ai</h2> </footer>
 </html>

@@ -1,0 +1,22 @@
+.btn{
+    background-color: #72c6f6; /* Green */
+    border: none;
+    text-align: center;
+    border-radius: 8px;
+    padding: 14px 40px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;}
+.btn:hover { background-color: #ec1f1f; box-shadow: 0 12px 16px 0 rgba(151, 204, 3, 0.548),0 17px 50px 0 rgba(238, 146, 146, 0.19); }
+
+#img{
+    float: right;
+    padding: 5px;
+}
+
+
+
+
+

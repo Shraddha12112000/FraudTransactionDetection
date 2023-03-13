@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <title>Fraud Transaction Detection Result</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/sty.css') }}">
+<title>Fraud Transaction Detection</title>
+
 </head>
 <body bgcolor="#B1D7B4">
     <center>
 
-        <h1>  PREDICTION OF TRANSACTION :  </h1>
-
-    {%if data == 0%}
-    <h1>Hey ! This Is Not a Fraud Transaction</h1>
-
-
-    {%else%}
-    <h1>This Transaction Is Fraud Transaction</h1>
-
-
-    {%endif%}
-
+        <h1>  PREDICTION :  </h1>
         <br><br>
-    <a class="txt1" href='/'>go back to home page</a>
-
     </center>
+    <script>
+        <h1>  PREDICTION :  </h1>
+        if (data==0) {
+            <h1>Not a Fraud Transaction</h1>
+            
+        }else{
+            <h1>Fraud Transaction</h1>
+        }
+    
+    </script>
+    <a class="txt1" href='/templates/index.html'>go back to home page</a>
     <br><br>
       <center>
         <h2>Created By:</h2>
-         <h2>Shraddha Gujar</h2>
+         <h2>Shraddha Manoj Gujar</h2>
          <h2> iNeuron.ai</h2>
       </center>
     
