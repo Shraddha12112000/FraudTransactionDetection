@@ -9,7 +9,6 @@ model = pickle.load(open('Model.pkl', 'rb'))
 def main():
     return render_template('index.html')
 
-
 @app.route('/predict', methods=['POST'])
 def home():
     data_1 = float(request.form.get('Time'))
