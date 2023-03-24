@@ -2,9 +2,9 @@ from flask import Flask, render_template, request
 import pickle
 import numpy as np
 
-model = pickle.load(open('F:\Fraud Transaction Detection\FraudTransactionDetection\Model.pkl', 'rb'))
-app = Flask(__name__)
 
+app = Flask(__name__)
+model = pickle.load(open('Model.pkl', 'rb'))
 @app.route('/')
 def main():
     return render_template('index.html')
@@ -12,7 +12,7 @@ def main():
 
 @app.route('/predict', methods=['POST'])
 def home():
-    data_1 = float(request.form.get('time'))
+    data_1 = float(request.form.get('Time'))
     data_2 = float(request.form.get('val1'))
     data_3 = float(request.form.get('val2'))
     data_4 = float(request.form.get('val3'))
@@ -42,7 +42,6 @@ def home():
     data_28= float(request.form.get('val27'))
     data_29= float(request.form.get('val28'))
     data_30= float(request.form.get('Amount'))
-
 
     arr = np.array([[data_1, data_2, data_3, data_4, data_5, data_6, data_7, data_8, data_9,data_10, data_11, data_12, data_13, data_14,
                      data_15, data_16, data_17,
